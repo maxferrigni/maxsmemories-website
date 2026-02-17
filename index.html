@@ -9,30 +9,26 @@
 :root{--ink:#1a1a1a;--bone:#f0ebe3;--warm:#f5f0e8;--cream:#e8e1d5;--feather:#2a2a2a;--ember:#c4501a;--glow:#e8652a;--ash:#6b6660;--nest:#d4c9b8;--branch:#8b7e6a}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--bone);-webkit-font-smoothing:antialiased;line-height:1.7}
-
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:background .4s}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--bone);-webkit-font-smoothing:antialiased;line-height:1.6}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:background .4s}
 nav.scrolled{background:rgba(240,235,227,.95);backdrop-filter:blur(12px)}
 .nav-logo{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:var(--ink);text-decoration:none}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{color:var(--ash);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .3s}
 .nav-links a:hover{color:var(--ember)}
-
-section{padding:2.5rem 3rem}
+section{padding:2rem 3rem}
 .wrap{max-width:720px;margin:0 auto}
-.section-label{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ember);margin-bottom:.25rem}
-h2{margin-top:0;font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;letter-spacing:-.02em;line-height:1.25;margin-bottom:.5rem}
-p{margin-bottom:.3rem;color:var(--feather);font-size:.95rem}
-ul{margin:0 0 .5rem 1.25rem;color:var(--feather);font-size:.95rem}
+.section-label{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ember);margin-bottom:.2rem}
+h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;letter-spacing:-.02em;line-height:1.25;margin-bottom:.4rem}
+p{margin-bottom:.25rem;color:var(--feather);font-size:.95rem}
+ul{margin:.15rem 0 .4rem 1.25rem;color:var(--feather);font-size:.95rem}
 ul li{margin-bottom:.1rem}
-
 .hero{min-height:100vh;background:var(--bone);display:flex;align-items:center;justify-content:center}
-.hero-content{max-width:680px;padding:6rem 2rem 3rem;text-align:center}
+.hero-content{max-width:680px;padding:5rem 2rem 2rem;text-align:center}
 .hero-crow{width:260px;height:auto;margin-bottom:.5rem}
-.hero-name{font-family:'Fraunces',serif;font-size:1rem;color:var(--branch);margin-bottom:2rem;font-style:italic}
-.hero h1{font-family:'Fraunces',serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;color:var(--ink);line-height:1.25;letter-spacing:-.02em;margin-bottom:1.25rem}
-.hero-intro{font-size:1rem;color:var(--ash);line-height:1.8;max-width:520px;margin:0 auto;text-align:left}
-
+.hero-name{font-family:'Fraunces',serif;font-size:1rem;color:var(--branch);margin-bottom:1.5rem;font-style:italic}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;color:var(--ink);line-height:1.25;letter-spacing:-.02em;margin-bottom:.75rem}
+.hero-intro{font-size:1rem;color:var(--ash);line-height:1.7;max-width:520px;margin:0 auto;text-align:left}
 .bg-warm{background:var(--warm)}
 .bg-bone{background:var(--bone)}
 .bg-cream{background:var(--cream)}
@@ -40,33 +36,27 @@ ul li{margin-bottom:.1rem}
 .bg-dark h2,.bg-dark p,.bg-dark ul,.bg-dark li{color:var(--nest)}
 .bg-dark .section-label{color:var(--glow)}
 .bg-dark h2{color:var(--bone)}
-
-.about-grid{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:start}
+.about-grid{display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start}
 .about-img{width:150px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
-
-.price-row{display:flex;justify-content:space-between;align-items:baseline;padding:1rem 0;border-bottom:1px solid rgba(0,0,0,.08)}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;padding:.6rem 0;border-bottom:1px solid rgba(0,0,0,.08)}
 .price-row:last-child{border-bottom:none}
 .price-row h3{font-size:.95rem;font-weight:600}
 .price-row .price{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:var(--ember)}
 .price-row p{font-size:.85rem;color:var(--ash);margin:0}
-
 .contact-email{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--glow);text-decoration:none}
 .contact-email:hover{color:var(--bone)}
-
-footer{background:var(--feather);padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center}
+footer{background:var(--feather);padding:1.25rem 3rem;display:flex;justify-content:space-between;align-items:center}
 footer p{font-size:.8rem;color:var(--ash);margin:0}
 footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color:var(--branch)}
-
 @media(max-width:768px){
-  nav{padding:1rem 1.5rem}.nav-links{display:none}section{padding:2rem 1.5rem}
-  .hero-crow{width:200px}.about-grid{grid-template-columns:1fr;text-align:center}
-  .about-img{margin:0 auto}.price-row{flex-direction:column;gap:.25rem}
-  footer{flex-direction:column;gap:.5rem;text-align:center}
+nav{padding:1rem 1.5rem}.nav-links{display:none}section{padding:1.5rem 1.5rem}
+.hero-crow{width:200px}.about-grid{grid-template-columns:1fr;text-align:center}
+.about-img{margin:0 auto}.price-row{flex-direction:column;gap:.25rem}
+footer{flex-direction:column;gap:.5rem;text-align:center}
 }
 </style>
 </head>
 <body>
-
 <nav id="nav">
   <a href="#" class="nav-logo">Kept by Crows</a>
   <ul class="nav-links">
@@ -78,7 +68,6 @@ footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <img src="Kept-By-Crows_Hero.png" alt="Max the Crow" class="hero-crow">
@@ -91,7 +80,6 @@ footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color
   </div>
 </section>
 
-<!-- WHY THIS EXISTS -->
 <section class="bg-warm">
   <div class="wrap">
     <span class="section-label">Why This Exists</span>
@@ -102,8 +90,24 @@ footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color
   </div>
 </section>
 
-<!-- WHAT WE DO -->
-<section id="what" class="bg-bone">
+<section id="how" class="bg-bone">
+  <div class="wrap">
+    <span class="section-label">How It Works</span>
+    <h2>I come to you.</h2>
+    <p>This starts at your kitchen table, not in a warehouse.</p>
+    <p>I arrive with a white tablecloth, archival gloves, and sorting materials. We sit down together and go through your collection. You tell me what you know — who's in the pictures, roughly when they were taken, which ones matter most. I handle every photo with care while you watch.</p>
+    <p>We organize your photos into batches by size, format, and condition. We talk about what you want — what gets scanned, what gets enhanced, how you'd like things organized. Nothing leaves your home until you're comfortable and you've signed a release.</p>
+    <p>From there, I take your photos to my studio for scanning and processing. When they're done, I bring everything back:</p>
+    <ul>
+      <li>Archival scans and enhanced versions</li>
+      <li>Organized folders ready for upload</li>
+      <li>Your originals, returned in a fireproof case with plastic separators — better protected than when they left</li>
+    </ul>
+    <p>The whole process is built on trust. You see how your photos are handled. You know exactly who has them. And you get them back in better shape than they started.</p>
+  </div>
+</section>
+
+<section id="what" class="bg-warm">
   <div class="wrap">
     <span class="section-label">What We Do</span>
     <h2>A clean, structured digital archive.</h2>
@@ -127,26 +131,7 @@ footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section id="how" class="bg-warm">
-  <div class="wrap">
-    <span class="section-label">How It Works</span>
-    <h2>I come to you.</h2>
-    <p>This starts at your kitchen table, not in a warehouse.</p>
-    <p>I arrive with a white tablecloth, archival gloves, and sorting materials. We sit down together and go through your collection. You tell me what you know — who's in the pictures, roughly when they were taken, which ones matter most. I handle every photo with care while you watch.</p>
-    <p>We organize your photos into batches by size, format, and condition. We talk about what you want — what gets scanned, what gets enhanced, how you'd like things organized. Nothing leaves your home until you're comfortable and you've signed a release.</p>
-    <p>From there, I take your photos to my studio for scanning and processing. When they're done, I bring everything back:</p>
-    <ul>
-      <li>Archival scans and enhanced versions</li>
-      <li>Organized folders ready for upload</li>
-      <li>Your originals, returned in a fireproof case with plastic separators — better protected than when they left</li>
-    </ul>
-    <p>The whole process is built on trust. You see how your photos are handled. You know exactly who has them. And you get them back in better shape than they started.</p>
-  </div>
-</section>
-
-<!-- BUILT FOR THE FUTURE -->
-<section class="bg-cream">
+<section class="bg-bone">
   <div class="wrap">
     <span class="section-label">Built for the Future</span>
     <h2>Preserved for what's possible tomorrow.</h2>
@@ -160,21 +145,16 @@ footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color
   </div>
 </section>
 
-<!-- THE ALTERNATIVES -->
-<section id="alternatives" class="bg-bone">
+<section id="alternatives" class="bg-cream">
   <div class="wrap">
     <span class="section-label">The Alternatives</span>
     <h2>You have three options.</h2>
-
     <p><strong>Do it yourself.</strong> A decent photo scanner costs $300–$500. Each photo takes 1–2 minutes to scan, crop, rotate, name, and file. A shoebox of 200 photos is 4–7 hours of work. The scans will be inconsistent. The files won't have metadata. Most people start this project and never finish it.</p>
-
     <p><strong>Use a national mail-in service.</strong> Companies like ScanMyPhotos, Legacybox, and Capture charge $0.50–$3.00 per photo. You box up your originals, ship them to another state, and wait 3–6 weeks. You get back a folder of JPEGs sorted by scan order — not by date, not by person, not by anything useful. No embedded metadata. No organization. Common complaints include long delays, inconsistent quality, and the anxiety of mailing irreplaceable photos to strangers.</p>
-
     <p><strong>Hire a local Crow.</strong> I come to your home. We go through your photos together. I handle the scanning, enhancement, metadata, and organization. Your photos never leave your area. You know exactly who's working on them. And when you upload to Google Photos or iCloud, everything lands in the right place.</p>
   </div>
 </section>
 
-<!-- WHY THE CROW -->
 <section class="bg-dark">
   <div class="wrap">
     <span class="section-label">Why the Crow</span>
@@ -188,7 +168,6 @@ footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="bg-bone">
   <div class="wrap">
     <span class="section-label">About</span>
@@ -204,7 +183,6 @@ footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color
   </div>
 </section>
 
-<!-- PRICING -->
 <section id="pricing" class="bg-cream">
   <div class="wrap">
     <span class="section-label">Pricing</span>
@@ -221,24 +199,22 @@ footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color
       <div><h3>Fireproof storage case</h3><p>Included as an option</p></div>
       <div class="price">$50</div>
     </div>
-    <p style="margin-top:1.25rem;color:var(--ash)">No surprise add-ons. No complicated checkout tiers.</p>
+    <p style="margin-top:.5rem;color:var(--ash)">No surprise add-ons. No complicated checkout tiers.</p>
   </div>
 </section>
 
-<!-- CLOSING -->
 <section class="bg-warm">
   <div class="wrap" style="text-align:center">
     <h2>Your memories, carefully kept.</h2>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="bg-dark" style="text-align:center">
   <div class="wrap">
     <span class="section-label">Get in Touch</span>
     <h2>Ready to get started?</h2>
     <p>Every consultation is free. No pressure.</p>
-    <a href="/cdn-cgi/l/email-protection#a6cec3cacac9e6cdc3d6d2c4dfc5d4c9d1d588c5c9cb" class="contact-email"><span class="__cf_email__" data-cfemail="e58d8089898aa58e809591879c86978a9296cb868a88">[email&#160;protected]</span></a>
+    <a href="mailto:hello@keptbycrows.com" class="contact-email">hello@keptbycrows.com</a>
   </div>
 </section>
 
@@ -246,5 +222,9 @@ footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color
   <p>&copy; 2025 Kept by Crows · Los Angeles, CA</p>
   <span class="ft">Faces remembered. Photos organized. Built to last.</span>
 </footer>
-
-<script data-cfas
+<script>
+const n=document.getElementById('nav');
+window.addEventListener('scroll',()=>n.classList.toggle('scrolled',scrollY>50));
+</script>
+</body>
+</html>
