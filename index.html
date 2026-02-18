@@ -18,7 +18,6 @@ nav.scrolled{background:rgba(240,235,227,.95);backdrop-filter:blur(12px)}
 .nav-links a:hover{color:var(--ember)}
 section{padding:2rem 3rem}
 .wrap{max-width:720px;margin:0 auto}
-.section-label{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ember);margin-bottom:.2rem}
 h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;letter-spacing:-.02em;line-height:1.25;margin-bottom:.4rem}
 p{margin-bottom:.25rem;color:var(--feather);font-size:.95rem}
 ul{margin:.15rem 0 .4rem 1.25rem;color:var(--feather);font-size:.95rem}
@@ -32,7 +31,6 @@ ul li{margin-bottom:.1rem}
 .bg-cream{background:var(--cream)}
 .bg-dark{background:var(--feather);color:var(--bone)}
 .bg-dark h2,.bg-dark p,.bg-dark ul,.bg-dark li{color:var(--nest)}
-.bg-dark .section-label{color:var(--glow)}
 .bg-dark h2{color:var(--bone)}
 .price-row{display:flex;justify-content:space-between;align-items:baseline;padding:.6rem 0;border-bottom:1px solid rgba(0,0,0,.08)}
 .price-row:last-child{border-bottom:none}
@@ -55,7 +53,6 @@ footer{flex-direction:column;gap:.5rem;text-align:center}
 <nav id="nav">
   <a href="#" class="nav-logo">Kept by Crows</a>
   <ul class="nav-links">
-    <li><a href="#alternatives">Alternatives</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -72,10 +69,55 @@ footer{flex-direction:column;gap:.5rem;text-align:center}
   </div>
 </section>
 
-<section id="alternatives" class="bg-cream">
+<section class="bg-warm">
   <div class="wrap">
-    <span class="section-label">The Alternatives</span>
-    <h2>You have three options.</h2>
+    <p>This starts at your kitchen table, not in a warehouse.</p>
+    <p>I come to your home with a white tablecloth, archival gloves, and sorting materials. We sit down together and go through your collection. You tell me what you know — who's in the pictures, roughly when they were taken, which ones matter most. I handle every photo with care while you watch.</p>
+    <p>We organize your photos into batches by size, format, and condition. We talk about what you want — what gets scanned, what gets enhanced, how you'd like things organized. Nothing leaves your home until you're comfortable and you've signed a release.</p>
+    <p>From there, I take your photos to my studio for scanning and processing. When they're done, I bring everything back:</p>
+    <ul>
+      <li>Archival scans and enhanced versions</li>
+      <li>Organized folders ready for upload</li>
+      <li>Your originals, returned in a fireproof case with plastic separators — better protected than when they left</li>
+    </ul>
+    <p>The whole process is built on trust. You see how your photos are handled. You know exactly who has them. And you get them back in better shape than they started.</p>
+  </div>
+</section>
+
+<section class="bg-bone">
+  <div class="wrap">
+    <p>Each collection includes:</p>
+    <ul>
+      <li>600 DPI archival master scans</li>
+      <li>Carefully enhanced versions</li>
+      <li>Embedded IPTC metadata</li>
+      <li>Files organized for immediate upload</li>
+      <li>Originals returned in a fireproof, water-resistant case</li>
+    </ul>
+    <p>When uploaded to your photo app:</p>
+    <ul>
+      <li>Photos fall into the correct timeline (when dates are known)</li>
+      <li>Face recognition begins identifying family members</li>
+      <li>Albums become easy to create and share</li>
+    </ul>
+    <p>You can interact with your history immediately — without renaming files or sorting folders for hours.</p>
+  </div>
+</section>
+
+<section class="bg-warm">
+  <div class="wrap">
+    <p>Every original scan is preserved at full archival resolution. That means:</p>
+    <ul>
+      <li>You can recreate prints at high quality</li>
+      <li>You're not locked into today's enhancement tools</li>
+      <li>As AI improves, your originals can be further restored</li>
+    </ul>
+    <p>Your photos aren't just digitized for today. They're preserved for what's possible tomorrow.</p>
+  </div>
+</section>
+
+<section class="bg-cream">
+  <div class="wrap">
     <p><strong>Do it yourself.</strong> A decent photo scanner costs $300–$500. Each photo takes 1–2 minutes to scan, crop, rotate, name, and file. A shoebox of 200 photos is 4–7 hours of work. The scans will be inconsistent. The files won't have metadata. Most people start this project and never finish it.</p>
     <p><strong>Use a national mail-in service.</strong> Companies like ScanMyPhotos, Legacybox, and Capture charge $0.50–$3.00 per photo. You box up your originals, ship them to another state, and wait 3–6 weeks. You get back a folder of JPEGs sorted by scan order — not by date, not by person, not by anything useful. No embedded metadata. No organization. Common complaints include long delays, inconsistent quality, and the anxiety of mailing irreplaceable photos to strangers.</p>
     <p><strong>Hire a local Crow.</strong> I come to your home. We go through your photos together. I handle the scanning, enhancement, metadata, and organization. Your photos never leave your area. You know exactly who's working on them. And when you upload to Google Photos or iCloud, everything lands in the right place.</p>
@@ -84,20 +126,12 @@ footer{flex-direction:column;gap:.5rem;text-align:center}
 
 <section class="bg-dark">
   <div class="wrap">
-    <span class="section-label">Why the Crow</span>
-    <h2>Crows collect. They remember. They recognize faces.</h2>
-    <p>Kept by Crows is built around those same principles:</p>
-    <ul>
-      <li>Intelligence</li>
-      <li>Organization</li>
-      <li>Long memory</li>
-    </ul>
+    <p>Crows collect. They remember. They recognize faces. Kept by Crows is built around those same principles: intelligence, organization, and long memory.</p>
   </div>
 </section>
 
 <section id="pricing" class="bg-cream">
   <div class="wrap">
-    <span class="section-label">Pricing</span>
     <h2>Simple and transparent.</h2>
     <div class="price-row">
       <div><h3>Per photo</h3></div>
@@ -117,13 +151,12 @@ footer{flex-direction:column;gap:.5rem;text-align:center}
 
 <section class="bg-warm">
   <div class="wrap" style="text-align:center">
-    <h2>Your memories, carefully kept.</h2>
+    <p style="font-size:1.05rem">Your memories, carefully kept.</p>
   </div>
 </section>
 
 <section id="contact" class="bg-dark" style="text-align:center">
   <div class="wrap">
-    <span class="section-label">Get in Touch</span>
     <h2>Ready to get started?</h2>
     <p>Every consultation is free. No pressure.</p>
     <a href="mailto:hello@keptbycrows.com" class="contact-email">hello@keptbycrows.com</a>
