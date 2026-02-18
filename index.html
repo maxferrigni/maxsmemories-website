@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kept by Crows — Faces Remembered. Photos Organized. Built to Last.</title>
+<title>Kept by Crows</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#1a1a1a;--bone:#f0ebe3;--warm:#f5f0e8;--cream:#e8e1d5;--feather:#2a2a2a;--ember:#c4501a;--glow:#e8652a;--ash:#6b6660;--nest:#d4c9b8;--branch:#8b7e6a}
@@ -23,12 +23,10 @@ h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;letter-spacing:
 p{margin-bottom:.25rem;color:var(--feather);font-size:.95rem}
 ul{margin:.15rem 0 .4rem 1.25rem;color:var(--feather);font-size:.95rem}
 ul li{margin-bottom:.1rem}
-.hero{min-height:auto;background:var(--bone);display:flex;align-items:center;justify-content:center}
-.hero-content{max-width:680px;padding:5rem 2rem 1rem;text-align:center}
-.hero-crow{width:60%;max-width:500px;height:auto;margin-bottom:.5rem}
-.hero-name{font-family:'Fraunces',serif;font-size:1rem;color:var(--branch);margin-bottom:1.5rem;font-style:italic}
-.hero h1{font-family:'Fraunces',serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;color:var(--ink);line-height:1.25;letter-spacing:-.02em;margin-bottom:.75rem}
-.hero-intro{font-size:1rem;color:var(--ash);line-height:1.7;max-width:520px;margin:0 auto;text-align:left}
+.hero{background:var(--bone);display:flex;align-items:center;justify-content:center}
+.hero-content{max-width:800px;padding:5rem 2rem 1rem;text-align:center}
+.hero-crow{width:90%;max-width:700px;height:auto;margin-bottom:1.5rem}
+.hero-statement{font-size:1.15rem;color:var(--feather);line-height:1.8;max-width:640px;margin:0 auto;text-align:left}
 .bg-warm{background:var(--warm)}
 .bg-bone{background:var(--bone)}
 .bg-cream{background:var(--cream)}
@@ -36,8 +34,6 @@ ul li{margin-bottom:.1rem}
 .bg-dark h2,.bg-dark p,.bg-dark ul,.bg-dark li{color:var(--nest)}
 .bg-dark .section-label{color:var(--glow)}
 .bg-dark h2{color:var(--bone)}
-.about-grid{display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start}
-.about-img{width:150px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
 .price-row{display:flex;justify-content:space-between;align-items:baseline;padding:.6rem 0;border-bottom:1px solid rgba(0,0,0,.08)}
 .price-row:last-child{border-bottom:none}
 .price-row h3{font-size:.95rem;font-weight:600}
@@ -50,8 +46,7 @@ footer p{font-size:.8rem;color:var(--ash);margin:0}
 footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color:var(--branch)}
 @media(max-width:768px){
 nav{padding:1rem 1.5rem}.nav-links{display:none}section{padding:1.5rem 1.5rem}
-.hero-crow{width:60%}.about-grid{grid-template-columns:1fr;text-align:center}
-.about-img{margin:0 auto}.price-row{flex-direction:column;gap:.25rem}
+.hero-crow{width:90%}.price-row{flex-direction:column;gap:.25rem}
 footer{flex-direction:column;gap:.5rem;text-align:center}
 }
 </style>
@@ -60,8 +55,6 @@ footer{flex-direction:column;gap:.5rem;text-align:center}
 <nav id="nav">
   <a href="#" class="nav-logo">Kept by Crows</a>
   <ul class="nav-links">
-    <li><a href="#what">What We Do</a></li>
-    <li><a href="#how">How It Works</a></li>
     <li><a href="#alternatives">Alternatives</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -71,78 +64,11 @@ footer{flex-direction:column;gap:.5rem;text-align:center}
 <section class="hero">
   <div class="hero-content">
     <img src="Kept-By-Crows_Hero.png" alt="Max the Crow" class="hero-crow">
-    <p class="hero-name">Hi, I'm Max. I never forget a face.</p>
-    <h1>Faces remembered. Photos organized.<br>Built to last.</h1>
-    <div class="hero-intro">
+    <div class="hero-statement">
       <p>I'm Max. I've seen what happens when everything burns — albums turned to ash, faces lost with the smoke. The Palisades fire. Eaton. Woolsey before that. It's not the first time, and it won't be the last.</p>
       <p>So I keep what matters. I take what's scattered in shoeboxes and envelopes and turn it into a clean, structured digital archive — high-resolution scans preserved for the future, carefully enhanced copies ready to use today, organized to live seamlessly inside your Google Photos and iCloud.</p>
       <p>The tools are finally good enough. The process is finally simple enough. The time to do this is now. Let me help.</p>
     </div>
-  </div>
-</section>
-
-<section class="bg-warm">
-  <div class="wrap">
-    <span class="section-label">Why This Exists</span>
-    <h2>Photos don't survive disasters.</h2>
-    <p>In January 2025, fires across Los Angeles destroyed thousands of homes — and with them, entire family photo collections.</p>
-    <p>Houses can be rebuilt. Photographs cannot.</p>
-    <p>I'm Max. I live in Glassell Park. I started Kept by Crows to make photo preservation simpler, more affordable, and more usable for families in my neighborhood.</p>
-  </div>
-</section>
-
-<section id="how" class="bg-bone">
-  <div class="wrap">
-    <span class="section-label">How It Works</span>
-    <h2>I come to you.</h2>
-    <p>This starts at your kitchen table, not in a warehouse.</p>
-    <p>I arrive with a white tablecloth, archival gloves, and sorting materials. We sit down together and go through your collection. You tell me what you know — who's in the pictures, roughly when they were taken, which ones matter most. I handle every photo with care while you watch.</p>
-    <p>We organize your photos into batches by size, format, and condition. We talk about what you want — what gets scanned, what gets enhanced, how you'd like things organized. Nothing leaves your home until you're comfortable and you've signed a release.</p>
-    <p>From there, I take your photos to my studio for scanning and processing. When they're done, I bring everything back:</p>
-    <ul>
-      <li>Archival scans and enhanced versions</li>
-      <li>Organized folders ready for upload</li>
-      <li>Your originals, returned in a fireproof case with plastic separators — better protected than when they left</li>
-    </ul>
-    <p>The whole process is built on trust. You see how your photos are handled. You know exactly who has them. And you get them back in better shape than they started.</p>
-  </div>
-</section>
-
-<section id="what" class="bg-warm">
-  <div class="wrap">
-    <span class="section-label">What We Do</span>
-    <h2>A clean, structured digital archive.</h2>
-    <p>We take your printed photos and turn them into a digital collection designed to work directly with Google Photos and iCloud.</p>
-    <p>The goal isn't just scanning. It's usability and long-term preservation.</p>
-    <p>Each collection includes:</p>
-    <ul>
-      <li>600 DPI archival master scans</li>
-      <li>Carefully enhanced versions</li>
-      <li>Embedded IPTC metadata</li>
-      <li>Files organized for immediate upload</li>
-      <li>Originals returned in a fireproof, water-resistant case</li>
-    </ul>
-    <p>When uploaded to your photo app:</p>
-    <ul>
-      <li>Photos fall into the correct timeline (when dates are known)</li>
-      <li>Face recognition begins identifying family members</li>
-      <li>Albums become easy to create and share</li>
-    </ul>
-    <p>You can interact with your history immediately — without renaming files or sorting folders for hours.</p>
-  </div>
-</section>
-
-<section class="bg-bone">
-  <div class="wrap">
-    <span class="section-label">Built for the Future</span>
-    <h2>Preserved for what's possible tomorrow.</h2>
-    <p>Every original scan is preserved at full archival resolution. That means:</p>
-    <ul>
-      <li>You can recreate prints at high quality</li>
-      <li>You're not locked into today's enhancement tools</li>
-      <li>As AI improves, your originals can be further restored</li>
-    </ul>
-    <p>Your photos aren't just digitized for today. They're preserved for what's possible tomorrow.</p>
   </div>
 </section>
 
@@ -168,7 +94,6 @@ footer{flex-direction:column;gap:.5rem;text-align:center}
     </ul>
   </div>
 </section>
-
 
 <section id="pricing" class="bg-cream">
   <div class="wrap">
@@ -201,7 +126,7 @@ footer{flex-direction:column;gap:.5rem;text-align:center}
     <span class="section-label">Get in Touch</span>
     <h2>Ready to get started?</h2>
     <p>Every consultation is free. No pressure.</p>
-    <a href="/cdn-cgi/l/email-protection#d6beb3babab996bdb3a6a2b4afb5a4b9a1a5f8b5b9bb" class="contact-email"><span class="__cf_email__" data-cfemail="bcd4d9d0d0d3fcd7d9ccc8dec5dfced3cbcf92dfd3d1">[email&#160;protected]</span></a>
+    <a href="mailto:hello@keptbycrows.com" class="contact-email">hello@keptbycrows.com</a>
   </div>
 </section>
 
@@ -209,4 +134,9 @@ footer{flex-direction:column;gap:.5rem;text-align:center}
   <p>&copy; 2025 Kept by Crows · Los Angeles, CA</p>
   <span class="ft">Faces remembered. Photos organized. Built to last.</span>
 </footer>
-<script data-cfas
+<script>
+const n=document.getElementById('nav');
+window.addEventListener('scroll',()=>n.classList.toggle('scrolled',scrollY>50));
+</script>
+</body>
+</html>
