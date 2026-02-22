@@ -35,7 +35,10 @@ ul li{margin-bottom:.1rem}
 /* Story Image */
 .story-section{padding:2.5rem 2rem}
 .story-wrap{max-width:860px;margin:0 auto;text-align:center}
-.story-wrap img{width:100%;max-width:800px;height:auto}
+.story-table{width:100%;border-collapse:collapse;border:none}
+.story-table td{vertical-align:middle;text-align:center;padding:.5rem}
+.story-table img{max-width:100%;height:auto;max-height:160px;object-fit:contain}
+.story-table .symbol{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;color:var(--ash);padding:0 .5rem}
 
 .bg-warm{background:var(--warm)}
 .bg-bone{background:var(--bone)}
@@ -96,10 +99,25 @@ footer{flex-direction:column;gap:.5rem;text-align:center}
   </div>
 </section>
 
-<!-- Story Image -->
-<section class="story-section bg-cream">
+<!-- Story Table -->
+<section class="story-section bg-bone">
   <div class="story-wrap">
-    <img src="Story%20Image.png" alt="Your shoebox plus ScanSquirrel equals organized photos and digital access">
+    <table class="story-table">
+      <tr>
+        <td><img src="Shoebox%20Disarray.png" alt="Messy shoebox of photos"></td>
+        <td class="symbol">+</td>
+        <td><img src="Squirrel.png" alt="ScanSquirrel"></td>
+        <td class="symbol">=</td>
+        <td><img src="Happy%20Customer.png" alt="Happy customer with photos on phone"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><img src="AI%20Scanning.png" alt="AI scanning and enhancement"></td>
+        <td></td>
+        <td><img src="Organized%20Photos.png" alt="Photos organized in fireproof case"></td>
+      </tr>
+    </table>
   </div>
 </section>
 
