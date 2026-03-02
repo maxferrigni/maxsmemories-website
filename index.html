@@ -51,8 +51,9 @@ ul.punchy li strong{color:var(--ink)}
 .steps-table .img-row img{max-width:100%;height:auto;max-height:200px;object-fit:contain}
 /* Mobile: stacked */
 .steps-mobile{display:none}
-.steps-mobile .m-step{background:var(--warm);border-radius:10px;padding:1.25rem;margin-bottom:1.25rem;text-align:center}
-.steps-mobile .m-step h3{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;margin-bottom:.35rem}
+.steps-mobile .m-step{padding:1.25rem;margin-bottom:1.25rem;text-align:center}
+.steps-mobile .m-step .step-num{font-family:'Fraunces',serif;font-size:.85rem;font-weight:600;color:var(--acorn);margin-bottom:.15rem}
+.steps-mobile .m-step .step-title{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;margin-bottom:.35rem}
 .steps-mobile .m-step p{font-size:.9rem;line-height:1.5;color:var(--feather);text-align:left;margin-bottom:.75rem}
 .steps-mobile .m-step img{max-width:260px;height:auto}
 
@@ -129,7 +130,6 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
 <body>
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <img src="Max.png" alt="Max">
     <span>Scan Squirrel</span>
   </a>
   <ul class="nav-links">
@@ -205,27 +205,32 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
     <!-- Mobile: stacked -->
     <div class="steps-mobile">
       <div class="m-step">
-        <h3>1. Tell Me About Your Shoebox</h3>
+        <div class="step-num">01</div>
+        <div class="step-title">Tell Me About Your Shoebox</div>
         <p>Maybe it's a mess. Maybe it's just a handful. Maybe it's massive, or all in frames. No matter what you have, it deserves to be preserved. We start with a simple conversation about what you've got.</p>
         <img src="Shoebox%20Disarray_f0ebe3.png" alt="Messy shoebox of photos">
       </div>
       <div class="m-step">
-        <h3>2. I Scan Everything</h3>
+        <div class="step-num">02</div>
+        <div class="step-title">I Scan Everything</div>
         <p>Scanning your own photos sucks — it takes forever and never looks right on your phone. I use a professional high-speed scanner at 600 DPI, front and back. Archive-quality, same standard used by museums.</p>
         <img src="scan_office3.png" alt="Scanning studio">
       </div>
       <div class="m-step">
-        <h3>3. AI Enhancement</h3>
+        <div class="step-num">03</div>
+        <div class="step-title">AI Enhancement</div>
         <p>Every photo gets an AI-enhanced version: colors corrected, faces sharpened, fading reversed. The original scan is always preserved untouched — the enhancement is a bonus, not a replacement.</p>
         <img src="AI%20Scanning_f0ebe3.png" alt="AI enhancement">
       </div>
       <div class="m-step">
-        <h3>4. Organized &amp; Safe</h3>
+        <div class="step-num">04</div>
+        <div class="step-title">Organized &amp; Safe</div>
         <p>The biggest frustration with old photos is never finding them. Your collection comes back cataloged — dated, named, organized by event. Originals in a fireproof case. No more digging through shoeboxes.</p>
         <img src="Organized%20Photos_f0ebe3.png" alt="Organized photos">
       </div>
       <div class="m-step">
-        <h3>5. Enjoyed Forever</h3>
+        <div class="step-num">05</div>
+        <div class="step-title">Enjoyed Forever</div>
         <p>Your photos land in your Google Photos or Apple Photos timeline — dated and in order. Face tagging, collages, videos, and more. Need help with any of that? Scan Squirrel can help with that too.</p>
         <img src="Happy_Customer.png" alt="Enjoying photos on phone">
       </div>
