@@ -35,10 +35,8 @@ ul li{margin-bottom:.25rem}
 .dialogue-line .text{color:var(--ink)}
 .dialogue-line.you .text{color:var(--acorn)}
 .slider-section{margin-top:1rem;min-height:5rem}
-.dialogue-line.slider{opacity:0;transition:opacity 0.4s ease, transform 0.4s ease}
-.dialogue-line.slider.entering{transform:translateX(-30px)}
-.dialogue-line.slider.visible{opacity:1;transform:translateX(0)}
-.dialogue-line.slider.exiting{opacity:0;transform:translateX(30px)}
+.dialogue-line.slider{opacity:0;transition:opacity 0.4s ease}
+.dialogue-line.slider.visible{opacity:1}
 
 /* Step flow — table layout */
 .steps-table{width:100%;max-width:1200px;margin:0 auto;border-collapse:collapse;table-layout:fixed}
@@ -392,19 +390,15 @@ const meText = meSlider.querySelector('.text');
 const youText = youSlider.querySelector('.text');
 
 function showMe() {
-  // Set up entering state
-  meSlider.classList.remove('visible', 'exiting');
-  meSlider.classList.add('entering');
+  meSlider.classList.remove('visible');
   meText.textContent = meLines[meIndex];
   
-  // Trigger reflow then animate in
-  void meSlider.offsetWidth;
-  meSlider.classList.remove('entering');
-  meSlider.classList.add('visible');
+  requestAnimationFrame(() => {
+    meSlider.classList.add('visible');
+  });
   
   setTimeout(() => {
     meSlider.classList.remove('visible');
-    meSlider.classList.add('exiting');
     meIndex = (meIndex + 1) % meLines.length;
   }, 4000);
 }
@@ -413,26 +407,21 @@ function showYou() {
   const line = youLines[youIndex];
   youIndex = (youIndex + 1) % youLines.length;
   
-  // Set up entering state
-  youSlider.classList.remove('visible', 'exiting');
-  youSlider.classList.add('entering');
+  youSlider.classList.remove('visible');
   
   if (line === "") {
     youText.textContent = "";
-    youSlider.classList.remove('entering');
     return;
   }
   
   youText.textContent = line;
   
-  // Trigger reflow then animate in
-  void youSlider.offsetWidth;
-  youSlider.classList.remove('entering');
-  youSlider.classList.add('visible');
+  requestAnimationFrame(() => {
+    youSlider.classList.add('visible');
+  });
   
   setTimeout(() => {
     youSlider.classList.remove('visible');
-    youSlider.classList.add('exiting');
   }, 7000);
 }
 
