@@ -51,7 +51,7 @@ ul.punchy li strong{color:var(--ink)}
 .steps-table .img-row img{max-width:100%;height:auto;max-height:200px;object-fit:contain}
 /* Mobile: stacked */
 .steps-mobile{display:none}
-.steps-mobile .m-step{background:var(--bone);border-radius:10px;padding:1.25rem;margin-bottom:1.25rem;text-align:center}
+.steps-mobile .m-step{background:var(--warm);border-radius:10px;padding:1.25rem;margin-bottom:1.25rem;text-align:center}
 .steps-mobile .m-step h3{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;margin-bottom:.35rem}
 .steps-mobile .m-step p{font-size:.9rem;line-height:1.5;color:var(--feather);text-align:left;margin-bottom:.75rem}
 .steps-mobile .m-step img{max-width:260px;height:auto}
@@ -77,6 +77,13 @@ ul.punchy li strong{color:var(--ink)}
 footer{background:var(--feather);padding:1.25rem 3rem;display:flex;justify-content:space-between;align-items:center}
 footer p{font-size:.8rem;color:var(--ash);margin:0}
 footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color:var(--branch)}
+
+/* About section with Max image */
+.about-container{display:flex;align-items:center;justify-content:center;gap:2.5rem;max-width:800px;margin:0 auto}
+.about-image{flex-shrink:0}
+.about-image img{height:192px;width:auto;border-radius:8px}
+.about-text{max-width:480px}
+
 @media(max-width:768px){
 nav{padding:1rem 1.5rem}.nav-links{display:none}section{padding:1.5rem 1.5rem}
 .hero{padding:5rem 1.5rem 2rem}
@@ -85,6 +92,8 @@ nav{padding:1rem 1.5rem}.nav-links{display:none}section{padding:1.5rem 1.5rem}
 .steps-mobile{display:block}
 .price-row{flex-direction:column;gap:.25rem}
 footer{flex-direction:column;gap:.5rem;text-align:center}
+.about-container{flex-direction:column;text-align:center;gap:1.5rem}
+.about-image img{height:140px}
 }
 </style>
 <!-- Google tag (gtag.js) -->
@@ -139,28 +148,19 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
 
 <!-- About Me -->
 <section class="bg-warm">
-  <div class="wrap" style="position:relative">
-
-    <img src="Max.png" alt="Max"
-         style="
-           position:absolute;
-           left:-220px;
-           top:0;
-           height:192px;
-           width:auto;
-           border-radius:6px;
-         ">
-
-    <div style="max-width:520px;margin:0 auto;text-align:left">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="Max.png" alt="Max">
+    </div>
+    <div class="about-text">
       <h2>Hey, I'm Max.</h2>
       <p>I'm based in Eagle Rock, Los Angeles. I'm passionate about photos and my side hustle is preserving, protecting, and bringing them back to life.</p>
     </div>
-
   </div>
 </section>
 
 <!-- How It Works — 5-step table -->
-<section id="how" class="bg-warm">
+<section id="how" class="bg-bone">
   <div style="max-width:1200px;margin:0 auto;padding:0 1rem">
     <h2 style="text-align:center;margin-bottom:1.5rem">How It Works</h2>
 
@@ -195,7 +195,7 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
       </tr>
       <tr class="img-row">
         <td><img src="Shoebox%20Disarray_f0ebe3.png" alt="Messy shoebox of photos"></td>
-        <td><img src="scan_office2.png" alt="Scanning studio"></td>
+        <td><img src="scan_office3.png" alt="Scanning studio"></td>
         <td><img src="AI%20Scanning_f0ebe3.png" alt="AI enhancement"></td>
         <td><img src="Organized%20Photos_f0ebe3.png" alt="Organized photos"></td>
         <td><img src="Happy_Customer.png" alt="Enjoying photos on phone"></td>
@@ -212,7 +212,7 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
       <div class="m-step">
         <h3>2. I Scan Everything</h3>
         <p>Scanning your own photos sucks — it takes forever and never looks right on your phone. I use a professional high-speed scanner at 600 DPI, front and back. Archive-quality, same standard used by museums.</p>
-        <img src="scan_office2.png" alt="Scanning studio">
+        <img src="scan_office3.png" alt="Scanning studio">
       </div>
       <div class="m-step">
         <h3>3. AI Enhancement</h3>
@@ -261,7 +261,7 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
 </section>
 
 <!-- What You Get -->
-<section id="what" class="bg-warm">
+<section id="what" class="bg-bone">
   <div class="wrap">
     <h2>From Messy Shoebox to&hellip;</h2>
     <ul>
@@ -276,7 +276,7 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
 </section>
 
 <!-- CTA -->
-<section class="bg-bone">
+<section class="bg-warm">
   <div class="wrap" style="text-align:center">
     <p style="font-size:1.05rem">Your memories, safely stashed.</p>
   </div>
@@ -292,7 +292,7 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
 </section>
 
 <!-- Service Areas -->
-<section class="bg-warm">
+<section class="bg-bone">
   <div class="wrap">
     <h2>Where I Work</h2>
     <p>I'm based in Eagle Rock and serve neighborhoods across Northeast LA, Pasadena, and the surrounding area. If you're nearby and have photos to preserve, I can come to you.</p>
