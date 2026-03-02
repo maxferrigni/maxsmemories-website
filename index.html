@@ -34,10 +34,11 @@ ul li{margin-bottom:.25rem}
 .dialogue-line .label{min-width:4rem;font-weight:700;color:var(--teal);flex-shrink:0;text-align:right;margin-right:0.75rem}
 .dialogue-line .text{color:var(--ink)}
 .dialogue-line.you .text{color:var(--acorn)}
-.dialogue-line.slider{opacity:0;transform:translateX(-50px);transition:opacity 0.3s ease, transform 0.3s ease}
+.slider-section{margin-top:1rem;min-height:5rem}
+.dialogue-line.slider{opacity:0;transition:opacity 0.4s ease, transform 0.4s ease}
+.dialogue-line.slider.entering{transform:translateX(-30px)}
 .dialogue-line.slider.visible{opacity:1;transform:translateX(0)}
-.dialogue-line.slider.exiting{opacity:0;transform:translateX(50px)}
-.slider-section{margin-top:1rem}
+.dialogue-line.slider.exiting{opacity:0;transform:translateX(30px)}
 
 /* Step flow — table layout */
 .steps-table{width:100%;max-width:1200px;margin:0 auto;border-collapse:collapse;table-layout:fixed}
@@ -333,7 +334,16 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
 <script>
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)});
 
-const meLines = [
+// Shuffle function
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+const meLines = shuffle([
   "Because your shoebox is one basement flood away from becoming a soup.",
   "Because faded photos fade more every single year.",
   "Because your mom's face deserves better than a crinkled 3x5.",
@@ -353,24 +363,25 @@ const meLines = [
   "Because paying someone to do it is cheaper & faster than buying a scanner.",
   "Because you were young once and took awesome trips and those photos are dope.",
   "Because it's weird that you stalk your ex-boyfriend's Facebook when you could just look at old photos of him."
-];
+]);
 
-const youLines = [
+const youLinesReal = shuffle([
   "I'll get to it right after I organize my garage and learn guitar.",
-  "",
   "My phone camera is basically museum-grade, right?",
-  "",
-  "",
   "Nobody looks at old photos anyway.",
-  "",
   "I trust a big random company that I send all my photos to than my neighbor — no offense, Max.",
-  "",
   "My kids don't care about old photos — wait, you can put them ON screens?",
-  "",
-  "",
-  "I don't even know where half of them are.",
-  ""
-];
+  "I don't even know where half of them are."
+]);
+
+// Build youLines with blanks sprinkled in
+const youLines = [];
+youLinesReal.forEach((line, i) => {
+  youLines.push(line);
+  if (i < youLinesReal.length - 1) {
+    youLines.push(""); // Add blank after each except last
+  }
+});
 
 let meIndex = 0;
 let youIndex = 0;
@@ -381,14 +392,15 @@ const meText = meSlider.querySelector('.text');
 const youText = youSlider.querySelector('.text');
 
 function showMe() {
+  // Set up entering state
   meSlider.classList.remove('visible', 'exiting');
-  void meSlider.offsetWidth; // Force reflow to reset position
-  
+  meSlider.classList.add('entering');
   meText.textContent = meLines[meIndex];
   
-  requestAnimationFrame(() => {
-    meSlider.classList.add('visible');
-  });
+  // Trigger reflow then animate in
+  void meSlider.offsetWidth;
+  meSlider.classList.remove('entering');
+  meSlider.classList.add('visible');
   
   setTimeout(() => {
     meSlider.classList.remove('visible');
@@ -401,19 +413,22 @@ function showYou() {
   const line = youLines[youIndex];
   youIndex = (youIndex + 1) % youLines.length;
   
+  // Set up entering state
   youSlider.classList.remove('visible', 'exiting');
-  void youSlider.offsetWidth; // Force reflow to reset position
+  youSlider.classList.add('entering');
   
   if (line === "") {
     youText.textContent = "";
+    youSlider.classList.remove('entering');
     return;
   }
   
   youText.textContent = line;
   
-  requestAnimationFrame(() => {
-    youSlider.classList.add('visible');
-  });
+  // Trigger reflow then animate in
+  void youSlider.offsetWidth;
+  youSlider.classList.remove('entering');
+  youSlider.classList.add('visible');
   
   setTimeout(() => {
     youSlider.classList.remove('visible');
