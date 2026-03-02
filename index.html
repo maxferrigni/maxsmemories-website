@@ -41,12 +41,20 @@ ul.punchy li strong{color:var(--ink)}
 .hero-cta a{color:var(--acorn);text-decoration:none;font-weight:500}
 .hero-cta a:hover{text-decoration:underline}
 
-/* Step flow */
-.steps-flow{display:flex;gap:1.5rem;overflow-x:auto;padding-bottom:1rem;-webkit-overflow-scrolling:touch}
-.step-card{flex:0 0 280px;background:var(--bone);border-radius:10px;padding:1.25rem;text-align:center}
-.step-img{width:100%;height:200px;object-fit:contain;margin-bottom:.75rem}
-.step-card h3{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;margin-bottom:.4rem}
-.step-card p{font-size:.88rem;text-align:left;line-height:1.55}
+/* Step flow — table layout */
+.steps-table{width:100%;max-width:1200px;margin:0 auto;border-collapse:collapse;table-layout:fixed}
+.steps-table td{vertical-align:top;padding:.4rem .6rem;width:20%}
+.steps-table .step-num{font-family:'Fraunces',serif;font-size:.85rem;font-weight:600;color:var(--acorn);margin-bottom:.15rem}
+.steps-table .step-title{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;margin-bottom:.3rem}
+.steps-table p{font-size:.84rem;line-height:1.5;color:var(--feather)}
+.steps-table .img-row td{text-align:center;padding-top:.4rem}
+.steps-table .img-row img{max-width:100%;height:auto;max-height:200px;object-fit:contain}
+/* Mobile: stacked */
+.steps-mobile{display:none}
+.steps-mobile .m-step{background:var(--bone);border-radius:10px;padding:1.25rem;margin-bottom:1.25rem;text-align:center}
+.steps-mobile .m-step h3{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;margin-bottom:.35rem}
+.steps-mobile .m-step p{font-size:.9rem;line-height:1.5;color:var(--feather);text-align:left;margin-bottom:.75rem}
+.steps-mobile .m-step img{max-width:260px;height:auto}
 
 .bg-warm{background:var(--warm)}
 .bg-bone{background:var(--bone)}
@@ -73,6 +81,8 @@ footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color
 nav{padding:1rem 1.5rem}.nav-links{display:none}section{padding:1.5rem 1.5rem}
 .hero{padding:5rem 1.5rem 2rem}
 .hero-headline{font-size:2.2rem}
+.steps-table{display:none}
+.steps-mobile{display:block}
 .price-row{flex-direction:column;gap:.25rem}
 footer{flex-direction:column;gap:.5rem;text-align:center}
 }
@@ -135,43 +145,78 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- How It Works — 5-step flow -->
+<!-- How It Works — 5-step table -->
 <section id="how" class="bg-warm">
-  <div style="max-width:1100px;margin:0 auto;padding:0 2rem">
+  <div style="max-width:1200px;margin:0 auto;padding:0 1rem">
     <h2 style="text-align:center;margin-bottom:1.5rem">How It Works</h2>
-    <div class="steps-flow">
 
-      <div class="step-card">
+    <!-- Desktop: table -->
+    <table class="steps-table">
+      <tr>
+        <td>
+          <div class="step-num">01</div>
+          <div class="step-title">Tell Me About Your Shoebox</div>
+          <p>Maybe it's a mess. Maybe it's just a handful. Maybe it's massive, or all in frames. No matter what you have, it deserves to be preserved. We start with a simple conversation about what you've got.</p>
+        </td>
+        <td>
+          <div class="step-num">02</div>
+          <div class="step-title">I Scan Everything</div>
+          <p>Scanning your own photos sucks — it takes forever and never looks right on your phone. I use a professional high-speed scanner at 600 DPI, front and back. Archive-quality, same standard used by museums.</p>
+        </td>
+        <td>
+          <div class="step-num">03</div>
+          <div class="step-title">AI Enhancement</div>
+          <p>Every photo gets an AI-enhanced version: colors corrected, faces sharpened, fading reversed. The original scan is always preserved untouched — the enhancement is a bonus, not a replacement.</p>
+        </td>
+        <td>
+          <div class="step-num">04</div>
+          <div class="step-title">Organized &amp; Safe</div>
+          <p>The biggest frustration with old photos is never finding them. Your collection comes back cataloged — dated, named, organized by event. Originals in a fireproof case. No more digging through shoeboxes.</p>
+        </td>
+        <td>
+          <div class="step-num">05</div>
+          <div class="step-title">Enjoyed Forever</div>
+          <p>Your photos land in your Google Photos or Apple Photos timeline — dated and in order. Face tagging, collages, videos, and more. Need help with any of that? Scan Squirrel can help with that too.</p>
+        </td>
+      </tr>
+      <tr class="img-row">
+        <td><img src="Shoebox%20Disarray_f0ebe3.png" alt="Messy shoebox of photos"></td>
+        <td><img src="scan_office.png" alt="Scanning studio"></td>
+        <td><img src="AI%20Scanning_f0ebe3.png" alt="AI enhancement"></td>
+        <td><img src="Organized%20Photos_f0ebe3.png" alt="Organized photos"></td>
+        <td><img src="Happy_Customer.png" alt="Enjoying photos on phone"></td>
+      </tr>
+    </table>
+
+    <!-- Mobile: stacked -->
+    <div class="steps-mobile">
+      <div class="m-step">
         <h3>1. Tell Me About Your Shoebox</h3>
-        <p>Maybe it's a mess. Maybe it's just a handful of photos. Maybe it's massive, or all in picture frames. No matter what you have, it deserves to be protected and preserved. We start by talking about what you've got and what matters most to you. No rush, no pressure — just a conversation.</p>
-        <img src="Shoebox%20Disarray_f0ebe3.png" alt="Messy shoebox of photos" class="step-img">
+        <p>Maybe it's a mess. Maybe it's just a handful. Maybe it's massive, or all in frames. No matter what you have, it deserves to be preserved. We start with a simple conversation about what you've got.</p>
+        <img src="Shoebox%20Disarray_f0ebe3.png" alt="Messy shoebox of photos">
       </div>
-
-      <div class="step-card">
+      <div class="m-step">
         <h3>2. I Scan Everything</h3>
-        <p>Let's be honest — scanning your own photos sucks. It takes forever without the right equipment, and the results never look great on your phone. I use a professional high-speed scanner at 600 DPI, front and back. Archive-quality, the same standard used by museums and libraries.</p>
-        <img src="scan_office.png" alt="Professional scanning studio" class="step-img">
+        <p>Scanning your own photos sucks — it takes forever and never looks right on your phone. I use a professional high-speed scanner at 600 DPI, front and back. Archive-quality, same standard used by museums.</p>
+        <img src="scan_office.png" alt="Scanning studio">
       </div>
-
-      <div class="step-card">
+      <div class="m-step">
         <h3>3. AI Enhancement</h3>
-        <p>Every photo gets an AI-enhanced version: colors corrected, faces sharpened, fading reversed. The original scan is always preserved untouched — the enhanced version is a bonus, not a replacement. The technology gets better every month.</p>
-        <img src="AI%20Scanning_f0ebe3.png" alt="AI enhancement" class="step-img">
+        <p>Every photo gets an AI-enhanced version: colors corrected, faces sharpened, fading reversed. The original scan is always preserved untouched — the enhancement is a bonus, not a replacement.</p>
+        <img src="AI%20Scanning_f0ebe3.png" alt="AI enhancement">
       </div>
-
-      <div class="step-card">
+      <div class="m-step">
         <h3>4. Organized &amp; Safe</h3>
-        <p>One of the biggest frustrations with old photos is never being able to find them. Your collection comes back cataloged — every photo dated, named, and organized by event. Physical originals returned in a fireproof, water-resistant case. No more digging through shoeboxes.</p>
-        <img src="Organized%20Photos_f0ebe3.png" alt="Organized photo catalog" class="step-img">
+        <p>The biggest frustration with old photos is never finding them. Your collection comes back cataloged — dated, named, organized by event. Originals in a fireproof case. No more digging through shoeboxes.</p>
+        <img src="Organized%20Photos_f0ebe3.png" alt="Organized photos">
       </div>
-
-      <div class="step-card">
+      <div class="m-step">
         <h3>5. Enjoyed Forever</h3>
-        <p>Your photos land right in your Google Photos or Apple Photos timeline — dated and in order. Automatic face tagging, the ability to create collages, videos, and more. And if you need help with any of that, Scan Squirrel can help with that too.</p>
-        <img src="Happy_Customer.png" alt="Person enjoying photos on phone" class="step-img">
+        <p>Your photos land in your Google Photos or Apple Photos timeline — dated and in order. Face tagging, collages, videos, and more. Need help with any of that? Scan Squirrel can help with that too.</p>
+        <img src="Happy_Customer.png" alt="Enjoying photos on phone">
       </div>
-
     </div>
+
   </div>
 </section>
 
