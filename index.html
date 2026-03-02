@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Scan Squirrel — Photo Scanning & Preservation</title>
 <meta name="description" content="Professional in-home photo scanning in Los Angeles. 600 DPI archival scans, AI enhancement, and direct delivery to your Google Photos or Apple Photos timeline.">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#1a1a1a;--bone:#f0ebe3;--warm:#f5f0e8;--cream:#e8e1d5;--feather:#2a2a2a;--acorn:#8b5e3c;--acorn-bright:#a0693f;--ash:#6b6660;--nest:#d4c9b8;--branch:#8b7e6a;--bark:#5c4a3a;--teal:#2c6e6a}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--bone);-webkit-font-smoothing:antialiased;line-height:1.6}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:background .4s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;transition:background .4s}
 nav.scrolled{background:rgba(240,235,227,.95);backdrop-filter:blur(12px)}
 .nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
-.nav-logo img{height:64px;width:auto}
-.nav-logo span{font-family:'DM Sans',sans-serif;font-size:1.5rem;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.nav-logo span{font-family:'DM Sans',sans-serif;font-size:1.8rem;font-weight:700;color:var(--ink);letter-spacing:-.01em}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{color:var(--ash);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .3s}
 .nav-links a:hover{color:var(--acorn)}
@@ -27,19 +26,18 @@ h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;margin-bottom:.
 p{margin-bottom:.5rem;color:var(--feather);font-size:.95rem}
 ul{margin:.15rem 0 .6rem 1.25rem;color:var(--feather);font-size:.95rem}
 ul li{margin-bottom:.25rem}
-ul.punchy{list-style:none;margin-left:0}
-ul.punchy li{padding:.45rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.95rem}
-ul.punchy li:last-child{border-bottom:none}
-ul.punchy li strong{color:var(--ink)}
 
-/* Hero — CTA */
-.hero{background:var(--bone);display:flex;align-items:center;justify-content:center;padding:7rem 2rem 2.5rem}
-.hero-content{max-width:960px;width:100%;text-align:center}
-.hero-headline{font-family:'DM Sans',sans-serif;font-size:3.4rem;font-weight:800;color:#2c5f5c;line-height:1.15;letter-spacing:-.03em;margin-bottom:.75rem}
-.hero-sub{font-family:'DM Sans',sans-serif;font-size:1.25rem;font-weight:400;color:var(--ash);margin-bottom:.4rem}
-.hero-cta{font-family:'DM Sans',sans-serif;font-size:1.05rem;color:var(--branch);margin-bottom:0}
-.hero-cta a{color:var(--acorn);text-decoration:none;font-weight:500}
-.hero-cta a:hover{text-decoration:underline}
+/* Hero with slider */
+.hero{background:var(--bone);padding:5.5rem 2rem 2rem;max-width:900px;margin:0 auto}
+.dialogue-line{display:flex;align-items:baseline;font-size:1.1rem;font-weight:500;margin-bottom:0.3rem}
+.dialogue-line.opener{font-size:1.8rem;font-weight:600}
+.dialogue-line .label{min-width:4rem;font-weight:700;color:var(--teal);flex-shrink:0;text-align:right;margin-right:0.75rem}
+.dialogue-line .text{color:var(--ink)}
+.dialogue-line.you .text{color:var(--acorn)}
+.dialogue-line.slider{opacity:0;transform:translateX(-50px);transition:opacity 0.3s ease, transform 0.3s ease}
+.dialogue-line.slider.visible{opacity:1;transform:translateX(0)}
+.dialogue-line.slider.exiting{opacity:0;transform:translateX(50px)}
+.slider-section{margin-top:1rem}
 
 /* Step flow — table layout */
 .steps-table{width:100%;max-width:1200px;margin:0 auto;border-collapse:collapse;table-layout:fixed}
@@ -86,9 +84,15 @@ footer .ft{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color
 .about-text{max-width:480px}
 
 @media(max-width:768px){
-nav{padding:1rem 1.5rem}.nav-links{display:none}section{padding:1.5rem 1.5rem}
-.hero{padding:5rem 1.5rem 2rem}
-.hero-headline{font-size:2.2rem}
+nav{padding:1rem 1rem}
+.nav-logo span{font-size:1.5rem}
+.nav-links{display:none}
+section{padding:1.5rem 1.5rem}
+.hero{padding:5rem 1rem 1.5rem}
+.dialogue-line.opener{font-size:1.4rem}
+.dialogue-line.opener .label{min-width:3rem;margin-right:0.6rem}
+.dialogue-line{font-size:1rem}
+.dialogue-line .label{min-width:3rem;margin-right:0.6rem;text-align:right}
 .steps-table{display:none}
 .steps-mobile{display:block}
 .price-row{flex-direction:column;gap:.25rem}
@@ -139,10 +143,14 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
   </ul>
 </nav>
 
-<!-- Hero — CTA -->
+<!-- Hero with slider -->
 <section class="hero">
-  <div class="hero-content">
-    <h1 class="hero-headline">What If You Lost<br>All Your Old Photos?</h1>
+  <div class="dialogue-line opener"><span class="label">Me:</span><span class="text">You should scan your old photos.</span></div>
+  <div class="dialogue-line opener you"><span class="label">You:</span><span class="text">Why?</span></div>
+  
+  <div class="slider-section">
+    <div id="me-slider" class="dialogue-line slider"><span class="label">Me:</span><span class="text"></span></div>
+    <div id="you-slider" class="dialogue-line slider you"><span class="label">You:</span><span class="text"></span></div>
   </div>
 </section>
 
@@ -153,8 +161,8 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
       <img src="Max.png" alt="Max">
     </div>
     <div class="about-text">
-      <h2>Hey, I'm Max.</h2>
-      <p>I'm based in Eagle Rock, Los Angeles. I'm passionate about photos and my side hustle is preserving, protecting, and bringing them back to life.</p>
+      <h2>Hey, I'm Max — I scan your old photos.</h2>
+      <p>I'm based in Eagle Rock, Los Angeles. I preserve, protect, and bring your memories back to life.</p>
     </div>
   </div>
 </section>
@@ -321,9 +329,107 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
   <p>&copy; 2025 Scan Squirrel &middot; Los Angeles, CA</p>
   <span class="ft">Gathered. Organized. Preserved.</span>
 </footer>
+
 <script>
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)});
+
+const meLines = [
+  "Because your shoebox is one basement flood away from becoming a soup.",
+  "Because faded photos fade more every single year.",
+  "Because your mom's face deserves better than a crinkled 3x5.",
+  "Because someday you won't be here to explain who's in them.",
+  "Because AI can sharpen a blurry face from 1974.",
+  "Because Google Photos will make you a birthday video that makes you cry.",
+  "Because the big companies charge a fortune and I live ten minutes away.",
+  "Because fire, earthquake, and that one clumsy cousin are all real threats.",
+  "Because Los Angeles fires recently remind us that 10,000+ people lost all of their photos.",
+  "Because your grandkids deserve to see what you looked like.",
+  "Because the back of every photo has someone's handwriting.",
+  "Because you keep moving that box and never opening it.",
+  "Because a shoebox is not an archiving strategy.",
+  "Because seeing your parents young and happy is the best feeling.",
+  "Because you already know you should.",
+  "Because you could do it yourself, but you won't and now somebody will help you.",
+  "Because paying someone to do it is cheaper & faster than buying a scanner.",
+  "Because you were young once and took awesome trips and those photos are dope.",
+  "Because it's weird that you stalk your ex-boyfriend's Facebook when you could just look at old photos of him."
+];
+
+const youLines = [
+  "I'll get to it right after I organize my garage and learn guitar.",
+  "",
+  "My phone camera is basically museum-grade, right?",
+  "",
+  "",
+  "Nobody looks at old photos anyway.",
+  "",
+  "I trust a big random company that I send all my photos to than my neighbor — no offense, Max.",
+  "",
+  "My kids don't care about old photos — wait, you can put them ON screens?",
+  "",
+  "",
+  "I don't even know where half of them are.",
+  ""
+];
+
+let meIndex = 0;
+let youIndex = 0;
+
+const meSlider = document.getElementById('me-slider');
+const youSlider = document.getElementById('you-slider');
+const meText = meSlider.querySelector('.text');
+const youText = youSlider.querySelector('.text');
+
+function showMe() {
+  meSlider.classList.remove('visible', 'exiting');
+  
+  setTimeout(() => {
+    meText.textContent = meLines[meIndex];
+    
+    requestAnimationFrame(() => {
+      meSlider.classList.add('visible');
+    });
+    
+    setTimeout(() => {
+      meSlider.classList.remove('visible');
+      meSlider.classList.add('exiting');
+      meIndex = (meIndex + 1) % meLines.length;
+    }, 4000);
+  }, 50);
+}
+
+function showYou() {
+  const line = youLines[youIndex];
+  youIndex = (youIndex + 1) % youLines.length;
+  
+  youSlider.classList.remove('visible', 'exiting');
+  
+  if (line === "") {
+    youText.textContent = "";
+    return;
+  }
+  
+  setTimeout(() => {
+    youText.textContent = line;
+    
+    requestAnimationFrame(() => {
+      youSlider.classList.add('visible');
+    });
+    
+    setTimeout(() => {
+      youSlider.classList.remove('visible');
+      youSlider.classList.add('exiting');
+    }, 7000);
+  }, 50);
+}
+
+showMe();
+setTimeout(showYou, 500);
+
+setInterval(showMe, 4500);
+setInterval(showYou, 8500);
 </script>
+
 <script async type='text/javascript' src='https://static.klaviyo.com/onsite/js/UYPYKi/klaviyo.js?company_id=UYPYKi'></script>
 <script type="text/javascript">
 !function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?function(){var n;(n=window._klOnsite).push.apply(n,arguments)}:function(){for(var n=arguments.length,o=new Array(n),w=0;w<n;w++)o[w]=arguments[w];var t="function"==typeof o[o.length-1]?o.pop():void 0,e=new Promise((function(n){window._klOnsite.push([i].concat(o,[function(i){t&&t(i),n(i)}]))}));return e}}})}catch(n){window.klaviyo=window.klaviyo||[],window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();
