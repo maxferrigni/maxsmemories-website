@@ -34,13 +34,13 @@ ul li{margin-bottom:.25rem}
 .dialogue-line .label{min-width:4rem;font-weight:700;color:var(--teal);flex-shrink:0;text-align:right;margin-right:0.75rem}
 .dialogue-line .text{color:var(--ink)}
 .dialogue-line.you .text{color:var(--acorn)}
-.slider-section{margin-top:1rem;min-height:8rem}
+.slider-section{margin-top:1rem;min-height:5.5rem}
 .dialogue-line.slider{opacity:0;transition:opacity 0.4s ease}
 .dialogue-line.slider.visible{opacity:1}
 
-/* Step flow — table layout */
-.steps-table{width:100%;max-width:1200px;margin:0 auto;border-collapse:collapse;table-layout:fixed}
-.steps-table td{vertical-align:top;padding:.4rem .6rem;width:20%}
+/* Step flow — table layout (4 steps) */
+.steps-table{width:100%;max-width:1000px;margin:0 auto;border-collapse:collapse;table-layout:fixed}
+.steps-table td{vertical-align:top;padding:.4rem .8rem;width:25%}
 .steps-table .step-num{font-family:'Fraunces',serif;font-size:.85rem;font-weight:600;color:var(--acorn);margin-bottom:.15rem}
 .steps-table .step-title{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;margin-bottom:.3rem}
 .steps-table p{font-size:.84rem;line-height:1.5;color:var(--feather)}
@@ -92,7 +92,7 @@ section{padding:1.5rem 1.5rem}
 .dialogue-line.opener .label{min-width:3rem;margin-right:0.6rem}
 .dialogue-line{font-size:1rem}
 .dialogue-line .label{min-width:3rem;margin-right:0.6rem;text-align:right}
-.slider-section{min-height:12rem}
+.slider-section{min-height:8rem}
 .steps-table{display:none}
 .steps-mobile{display:block}
 .price-row{flex-direction:column;gap:.25rem}
@@ -134,7 +134,7 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
 <body>
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <span>Scan Squirrel</span>
+    <span>Scan Your Old Photos</span>
   </a>
   <ul class="nav-links">
     <li><a href="#how">How It Works</a></li>
@@ -145,12 +145,11 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
 
 <!-- Hero with slider -->
 <section class="hero">
-  <div class="dialogue-line opener"><span class="label">Me:</span><span class="text">You should scan your old photos.</span></div>
+  <div class="dialogue-line opener"><span class="label">Me:</span><span class="text">People should scan their old photos.</span></div>
   <div class="dialogue-line opener you"><span class="label">You:</span><span class="text">Why?</span></div>
   
   <div class="slider-section">
     <div id="me-slider" class="dialogue-line slider"><span class="label">Me:</span><span class="text"></span></div>
-    <div id="you-slider" class="dialogue-line slider you"><span class="label">You:</span><span class="text"></span></div>
   </div>
 </section>
 
@@ -161,15 +160,15 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
       <img src="Max.png" alt="Max">
     </div>
     <div class="about-text">
-      <h2>Hey, I'm Max — I scan your old photos.</h2>
-      <p>I'm based in Eagle Rock, Los Angeles. I preserve, protect, and bring your memories back to life.</p>
+      <h2>I'm Max, Your LA Neighbor</h2>
+      <p>I'm based in Eagle Rock, Los Angeles. Preserving old photos is my passion and my side hustle — I protect and bring your memories back to life.</p>
     </div>
   </div>
 </section>
 
-<!-- How It Works — 5-step table -->
+<!-- How It Works — 4-step table -->
 <section id="how" class="bg-bone">
-  <div style="max-width:1200px;margin:0 auto;padding:0 1rem">
+  <div style="max-width:1000px;margin:0 auto;padding:0 1rem">
     <h2 style="text-align:center;margin-bottom:1.5rem">How It Works</h2>
 
     <!-- Desktop: table -->
@@ -177,26 +176,21 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
       <tr>
         <td>
           <div class="step-num">01</div>
-          <div class="step-title">Tell Me About Your Shoebox</div>
-          <p>Maybe it's a mess. Maybe it's just a handful. Maybe it's massive, or all in frames. No matter what you have, it deserves to be preserved. We start with a simple conversation about what you've got.</p>
+          <div class="step-title">We Talk</div>
+          <p>You tell me about your photos — what you have, where they are, what shape they're in. Maybe it's a shoebox, maybe it's a bin in the garage, maybe it's a few frames on the wall. Every collection is different. We start with a simple conversation.</p>
         </td>
         <td>
           <div class="step-num">02</div>
-          <div class="step-title">I Scan Everything</div>
-          <p>Scanning your own photos sucks — it takes forever and never looks right on your phone. I use a professional high-speed scanner at 600 DPI, front and back. Archive-quality, same standard used by museums.</p>
+          <div class="step-title">Scanning</div>
+          <p>I use a professional high-speed scanner at 600 DPI, front and back — archival standard. The original scan is always preserved untouched. As an option for your iPhotos or Google Photos library, every photo can also be cleaned up, tagged, and dated so it lands in the right spot on your timeline.</p>
         </td>
         <td>
           <div class="step-num">03</div>
-          <div class="step-title">AI Enhancement</div>
-          <p>Every photo gets an AI-enhanced version: colors corrected, faces sharpened, fading reversed. The original scan is always preserved untouched — the enhancement is a bonus, not a replacement.</p>
-        </td>
-        <td>
-          <div class="step-num">04</div>
           <div class="step-title">Organized &amp; Safe</div>
           <p>The biggest frustration with old photos is never finding them. Your collection comes back cataloged — dated, named, organized by event. Originals in a fireproof case. No more digging through shoeboxes.</p>
         </td>
         <td>
-          <div class="step-num">05</div>
+          <div class="step-num">04</div>
           <div class="step-title">Enjoyed Forever</div>
           <p>Your photos land in your Google Photos or Apple Photos timeline — dated and in order. Face tagging, collages, videos, and more. Need help with any of that? Scan Squirrel can help with that too.</p>
         </td>
@@ -204,7 +198,6 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
       <tr class="img-row">
         <td><img src="Shoebox%20Disarray_f0ebe3.png" alt="Messy shoebox of photos"></td>
         <td><img src="scan_office3.png" alt="Scanning studio"></td>
-        <td><img src="AI%20Scanning_f0ebe3.png" alt="AI enhancement"></td>
         <td><img src="Organized%20Photos_f0ebe3.png" alt="Organized photos"></td>
         <td><img src="Happy_Customer.png" alt="Enjoying photos on phone"></td>
       </tr>
@@ -214,30 +207,24 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
     <div class="steps-mobile">
       <div class="m-step">
         <div class="step-num">01</div>
-        <div class="step-title">Tell Me About Your Shoebox</div>
-        <p>Maybe it's a mess. Maybe it's just a handful. Maybe it's massive, or all in frames. No matter what you have, it deserves to be preserved. We start with a simple conversation about what you've got.</p>
+        <div class="step-title">We Talk</div>
+        <p>You tell me about your photos — what you have, where they are, what shape they're in. Maybe it's a shoebox, maybe it's a bin in the garage, maybe it's a few frames on the wall. Every collection is different. We start with a simple conversation.</p>
         <img src="Shoebox%20Disarray_f0ebe3.png" alt="Messy shoebox of photos">
       </div>
       <div class="m-step">
         <div class="step-num">02</div>
-        <div class="step-title">I Scan Everything</div>
-        <p>Scanning your own photos sucks — it takes forever and never looks right on your phone. I use a professional high-speed scanner at 600 DPI, front and back. Archive-quality, same standard used by museums.</p>
+        <div class="step-title">Scanning</div>
+        <p>I use a professional high-speed scanner at 600 DPI, front and back — archival standard. The original scan is always preserved untouched. As an option for your iPhotos or Google Photos library, every photo can also be cleaned up, tagged, and dated so it lands in the right spot on your timeline.</p>
         <img src="scan_office3.png" alt="Scanning studio">
       </div>
       <div class="m-step">
         <div class="step-num">03</div>
-        <div class="step-title">AI Enhancement</div>
-        <p>Every photo gets an AI-enhanced version: colors corrected, faces sharpened, fading reversed. The original scan is always preserved untouched — the enhancement is a bonus, not a replacement.</p>
-        <img src="AI%20Scanning_f0ebe3.png" alt="AI enhancement">
-      </div>
-      <div class="m-step">
-        <div class="step-num">04</div>
         <div class="step-title">Organized &amp; Safe</div>
         <p>The biggest frustration with old photos is never finding them. Your collection comes back cataloged — dated, named, organized by event. Originals in a fireproof case. No more digging through shoeboxes.</p>
         <img src="Organized%20Photos_f0ebe3.png" alt="Organized photos">
       </div>
       <div class="m-step">
-        <div class="step-num">05</div>
+        <div class="step-num">04</div>
         <div class="step-title">Enjoyed Forever</div>
         <p>Your photos land in your Google Photos or Apple Photos timeline — dated and in order. Face tagging, collages, videos, and more. Need help with any of that? Scan Squirrel can help with that too.</p>
         <img src="Happy_Customer.png" alt="Enjoying photos on phone">
@@ -279,7 +266,7 @@ src="https://www.facebook.com/tr?id=2148206675947024&ev=PageView&noscript=1"
     <h2>From Messy Shoebox to&hellip;</h2>
     <ul>
       <li><strong>600 DPI archival scans</strong> — front &amp; back, every photo</li>
-      <li><strong>AI-enhanced versions</strong> — fading reversed, faces sharpened, colors corrected</li>
+      <li><strong>Enhanced versions</strong> — fading reversed, faces sharpened, colors corrected</li>
       <li><strong>Dates &amp; names embedded</strong> — so photos land in the right spot on your timeline</li>
       <li><strong>Delivered to your phone</strong> — one link drops everything into Google Photos or Apple Photos</li>
       <li><strong>Originals returned in a fireproof case</strong> — organized, labeled, protected</li>
@@ -364,73 +351,23 @@ const meLines = shuffle([
   "Because it's weird that you stalk your ex-boyfriend's Facebook when you could just look at old photos of him."
 ]);
 
-const youLinesReal = shuffle([
-  "I'll get to it right after I organize my garage and learn guitar.",
-  "My phone camera is basically museum-grade, right?",
-  "Nobody looks at old photos anyway.",
-  "I trust a big random company that I send all my photos to than my neighbor — no offense, Max.",
-  "My kids don't care about old photos — wait, you can put them ON screens?",
-  "I don't even know where half of them are."
-]);
-
-// Build youLines with blanks sprinkled in
-const youLines = [];
-youLinesReal.forEach((line, i) => {
-  youLines.push(line);
-  if (i < youLinesReal.length - 1) {
-    youLines.push(""); // Add blank after each except last
-  }
-});
-
 let meIndex = 0;
-let youIndex = 0;
 
 const meSlider = document.getElementById('me-slider');
-const youSlider = document.getElementById('you-slider');
 const meText = meSlider.querySelector('.text');
-const youText = youSlider.querySelector('.text');
 
 function showMe() {
   meSlider.classList.remove('visible');
-  meText.textContent = meLines[meIndex];
   
-  requestAnimationFrame(() => {
+  setTimeout(() => {
+    meText.textContent = meLines[meIndex];
     meSlider.classList.add('visible');
-  });
-  
-  setTimeout(() => {
-    meSlider.classList.remove('visible');
     meIndex = (meIndex + 1) % meLines.length;
-  }, 4000);
-}
-
-function showYou() {
-  const line = youLines[youIndex];
-  youIndex = (youIndex + 1) % youLines.length;
-  
-  youSlider.classList.remove('visible');
-  
-  if (line === "") {
-    youText.textContent = "";
-    return;
-  }
-  
-  youText.textContent = line;
-  
-  requestAnimationFrame(() => {
-    youSlider.classList.add('visible');
-  });
-  
-  setTimeout(() => {
-    youSlider.classList.remove('visible');
-  }, 7000);
+  }, 400);
 }
 
 showMe();
-setTimeout(showYou, 500);
-
 setInterval(showMe, 4500);
-setInterval(showYou, 8500);
 </script>
 
 <script async type='text/javascript' src='https://static.klaviyo.com/onsite/js/UYPYKi/klaviyo.js?company_id=UYPYKi'></script>
